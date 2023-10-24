@@ -3,49 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My First Webpage</title>
+    <style>
+        .turtle {
+            float: left;
+        }
+    </style>
 </head>
 <body>
+    <div class="wrapper" id="app">
+        <header id="mainHeader">
+            <img class="responsive" src="HeroImage-Ocean.jpg" width="100%" alt="Image of a Ocean">
+        </header>
+        <main>
+            <!-- Content element are beeing structured in sections -->
+            <!-- Content element BEGIN -->
+            <section>
+                
+                <div class="text">
+                    <h2>Headline of the element</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium expedita, nam voluptatibus libero quaerat officiis aperiam, optio voluptatem veritatis laborum cupiditate excepturi et eos pariatur.</p>
+                </div>
 
-    <h1>Header 1</h1>
-
-    Lorem ipsum dolor sit amet consectetur adipisicingelit. Aut nulla culpa nesciunt reiciendis provident commodi labore porro. Expedita, iusto hic. Qui expedita delectus cum, iure temporibus et? Voluptatem, animi distinctio! <br>
-
-    <h2>Headline 2</h2>
-
-    <i>Italic</i> <br>
-    <em>Italic SimChange?</em> <br>
-    <b>Bold</b> <br>
-    <strong>Strong</strong> <br>
-
-    <p>This is a second text</p>
-
-    <h3>Unorderd List</h3>
-    <!-- 
-        Comments, but all can see it 
-        Hier weiter infos:
-        http://example.com
-    -->
-    <ul>
-        <li>Feature 1</li>
-        <li>Feature 2</li>
-        <li>Feature 3
-            <ul>
-                <li>Unterpunkt 1</li>
+                <img style="float: left; max-width: 100%;" src="Turtle.jpg" alt="Content element 1">
+            </section>
+            <!-- Content Element END -->
+            <div style="clear: both;"></div>
+        </main>
+        <footer>
+            <div class="inner-wrapper">
                 <ul>
-                    <li>Unterpunkt 2</li>
+                    <!-- a als Anchor Link innerhalb des selben Dokuments-->
+                    <li><a target="_blank" href="impressum.html">Impressum</a></li>
+                    <li><a href="#">AGB</a></li>
+                    <li><a target="_blank" href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010&ref_=footer_privacy">Datenschutz</a></li>
+                    <li><a href="#">Press &amp; Download</a></li>
+                    <li><a href="jobs/karriere.html">Jubs &amp; Karriere</a></li>
+                    <li><a href="/">Home</a></li>
                 </ul>
-            </ul>
-        </li>
-    </ul>
-    <h4>Orderd List</h4>
-    <ol type="1">
-        <li>B &copy;</li>
-        <li>A &reg;</li>
-        <li>C &euro; 80,50</li>
-    </ol>
-
-
-    <img src="HondaCivic.jpg" width="100%" alt="Immage cant be displayed">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
