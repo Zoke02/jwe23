@@ -1,0 +1,28 @@
+article {
+    display: inline-block;
+    width: 250px;
+    height: 200px;
+    background-color: lightgrey;
+    padding: 15px;
+    border: 2px solid green;
+    border-radius: 2%;
+    margin: 5px;
+}
+
+article:first-child {
+    border: 2px solid red;
+}
+
+article:last-child {
+    border: 2px solid blue;
+}
+
+article h2 {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    section {
+        display: flex;
+    }
+}
