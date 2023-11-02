@@ -1,6 +1,6 @@
 article {
-    display: inline-block;
-    width: 250px;
+    display: block;
+    width: auto;
     height: 200px;
     background-color: lightgrey;
     padding: 15px;
