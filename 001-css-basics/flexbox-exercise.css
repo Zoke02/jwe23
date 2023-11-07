@@ -1,0 +1,57 @@
+@font-face {
+    font-family: lato;
+    src: url(flexbox-exercises-fonts/Lato-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: lato, Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.images {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.articles {
+    background-color: gold;
+}
+
+.articles:first-child {
+    flex: 5;
+}
+
+.articles:last-child {
+    flex: 7;
+}
+
+footer {
+    background-color: #555;
+    padding: 3% 0 3%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        display: block;
+        gap: 0.5rem;
+    }
+    .wrapper {
+        width: 100%;
+    }
+}
