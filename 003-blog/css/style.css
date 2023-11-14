@@ -1,3 +1,22 @@
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Regular.ttf") format(ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Bold.ttf") format(ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Black.ttf") format(ttf);
+    font-style: normal;
+    font-weight: 900;
+}
+
 html,
 body {
     margin: 0;
@@ -6,6 +25,7 @@ body {
 
 html * {
     box-sizing: border-box;
+    font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -13,6 +33,11 @@ html * {
     --grey: #969696;
     --light-grey: #dddddd;
     --red: #e74149;
+    --h-space: 30px;
+}
+
+.h-spaceing {
+    padding: var(--h-space);
 }
 
 #main-header {
@@ -20,16 +45,25 @@ html * {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    min-height: 75vh;
+    min-height: 50vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
 }
 
+#main-header h1 {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+/* > affects only containers inside main-header but not sub containers */
 #main-header .container {
     display: flex;
+    flex-flow: row;
     justify-content: space-between;
     align-items: center;
+    flex: 0;
+    width: 100%;
 }
 
 #main-header .container:last-child {
@@ -45,10 +79,76 @@ button.cta {
     font-size: 18px;
     border: none;
     border-radius: 12px;
+    font-weight: 400;
+}
+
+.teaser {
+    display: flex;
+    flex-direction: column;
+    padding: var(--h-space);
+    gap: var(--h-space);
+}
+
+.teaser h3,
+a {
+    color: var(--red);
+}
+
+.teaser a:hover {
+    color: var(--light-grey);
+}
+
+.teaser img {
+    width: 100%;
+    height: auto;
+}
+
+.teaser-articles {
+    display: flex;
+    flex-direction: column;
+    gap: var(--h-space);
+}
+
+.inner-wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main-footer {
+    background-color: var(--light-grey);
+}
+
+#main-footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-footer nav ul li {
+    flex-basis: 50%;
+}
+
+#footer-logo {
+    display: none;
+}
+
+#copyright {
+    font-size: 0.8rem;
+    color: var(--grey);
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-    /* CSS Code */
+    .teaser-articles {
+        display: flex;
+        flex-direction: row;
+        gap: var(--h-space);
+    }
+
+    #main-footer .inner-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (min-width: 1200px) {
