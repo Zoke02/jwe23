@@ -1,16 +1,16 @@
 @font-face {
     font-family: lato;
-    src: url(fonts/Lato-Regular.ttf);
+    src: url(../fonts/Lato-Regular.ttf);
 }
 
 @font-face {
     font-family: lato;
-    src: url(fonts/Lato-Bold.ttf);
+    src: url(../fonts/Lato-Bold.ttf);
     font-weight: bold;
 }
 @font-face {
     font-family: lato;
-    src: url(fonts/Lato-Black.ttf);
+    src: url(../fonts/Lato-Black.ttf);
     font-weight: 900;
 }
 
@@ -36,13 +36,29 @@ h1 {
     font-weight: 900;
 }
 
-img {
+main {
+    padding-top: var(--h-space);
+    padding-bottom: var(--h-space);
+}
+
+main img {
     max-width: 100%;
     height: auto;
 }
 
+#main-header .inner-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 30px;
+    background: white;
+    z-index: -9;
+}
+
 #main-header {
-    background-image: url(img/blog-banner.png);
+    background-image: url(../img/blog-banner.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -51,6 +67,11 @@ img {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    margin-top: 80px;
+}
+#main-header .inner-wrapper {
+    position: relative;
+    margin-top: -60px;
 }
 
 .h-spacing {
@@ -92,7 +113,7 @@ button.cta {
 .container {
     width: 100%;
     /* DEV: farben zur darstellung der Container  */
-    background-color: rgba(255, 155, 0, 0.25);
+    /* background-color: rgba(255, 155, 0, 0.25); */
 }
 
 #main-footer {
@@ -104,13 +125,21 @@ button.cta {
 }
 
 #copyright {
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: var(--grey);
     text-align: center;
+    margin-top: 50px;
+    padding-left: var(--h-space);
+    padding-right: var(--h-space);
 }
 
 a {
     color: var(--red);
+}
+
+#main-footer .inner-wrapper {
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 #main-footer a {
@@ -120,9 +149,36 @@ a {
 #main-footer nav ul {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
 }
 #main-footer nav ul li {
     flex-basis: 50%;
+    line-height: 2.5em;
+    padding-left: 0.5em;
+}
+
+#main-footer nav ul li::marker {
+    content: "\25BA";
+    color: var(--red);
+    font-size: 0.8rem;
+    vertical-align: middle;
+}
+
+main a::after {
+    content: "\25BA";
+    color: var(--red);
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    /* content: "";
+    color: var(--red);
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: transparent url(../img/nav.svg) no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 0;
+    left: 0; */
 }
 
 /* Teaser Element */
