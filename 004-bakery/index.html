@@ -1,26 +1,84 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Bakery</title>
+        <link rel="stylesheet" href="css/stylesheet.css" />
     </head>
     <body>
         <div class="wrapper">
-            <header id="main-header">
-                <div>
+            <header id="head-wrapper">
+                <div class="container inner-wrapper">
                     <a href="index.html">
-                        <img src="img/logo.png" alt="" />
+                        <img class="logo" src="img/logo.png" alt="" />
                     </a>
-                    <nav>
-                        <a href="index.html"
-                            ><img src="img/nav.svg" alt=""
-                        /></a>
+                    <nav id="mobile-menu">
+                        <img src="img/nav.svg" alt="" />
+                    </nav>
+
+                    <nav id="desktop-menu">
+                        <div><a href="#">About Us</a></div>
+                        <div><a href="#">Our Team</a></div>
+                        <div><a href="#">Gallery</a></div>
+                        <div><a href="#">Contact</a></div>
                     </nav>
                 </div>
+                <div class="container">
+                    <img id="hero-img" src="img/hero-image-mobile.jpg" alt="" />
+                    <div id="quality-seal">
+                        <img src="img/logo-qualitätssiegel.png" alt="" />
+                    </div>
+                </div>
             </header>
-            <main></main>
-            <footer></footer>
+            <main>
+                <div id="main-wrapper" class="inner-wrapper">
+                    <div id="main-wrapper-top">Our Products</div>
+                    <div class="main-wrapper-middle">
+                        <div class="articles">
+                            <img src="img/content/thumbs/teaser1.jpg" alt="" />
+                        </div>
+                        <div class="articles">
+                            <img
+                                src="img/content/thumbs/column-item-image2.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="articles">
+                            <img
+                                src="img/content/thumbs/column-item-image3.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="articles">
+                            <img
+                                src="img/content/thumbs/column-item-image4.jpg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div id="main-wrapper-bottom">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                        </p>
+                        <button>Place Order Here</button>
+                    </div>
+                </div>
+            </main>
+            <footer id="footer-wrapper">
+                <div class="start-footer">
+                    <ul class="inner-wrapper">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Data Protection and Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="end-footer">&copy; 2023 Bakery | copyright</div>
+            </footer>
         </div>
     </body>
 </html>
