@@ -40,7 +40,7 @@ body {
     display: none;
 }
 .inner-wrapper {
-    max-width: 1500px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -57,12 +57,12 @@ body {
     max-width: 18rem;
 }
 
-#quality-seal {
+#quality-seal img {
     position: absolute;
     width: 7rem;
     height: 7rem;
-    right: 3rem;
-    bottom: -0.5rem;
+    right: 1.5rem;
+    bottom: 12rem;
     z-index: 10;
 }
 
@@ -70,8 +70,10 @@ body {
     position: relative;
 }
 
-#head-wrapper .container:last-of-type img {
+#head-wrapper #hero-img {
     width: 100%;
+    height: 65vh;
+    object-fit: cover;
 }
 
 #main-wrapper {
@@ -82,20 +84,24 @@ body {
 }
 
 #main-wrapper-top {
+    position: relative;
     text-align: center;
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: silver;
-    margin: 6rem 0;
+    margin: 3rem 0;
 }
 
 #main-wrapper .main-wrapper-middle {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: flex-start;
-    gap: 3rem;
     justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
     margin-bottom: 5rem;
+}
+
+#main-wrapper .main-wrapper-middle .articles {
+    margin: 0 auto;
 }
 
 #main-wrapper .main-wrapper-middle .articles img {
@@ -191,7 +197,7 @@ body {
 
     #desktop-menu a {
         text-decoration: none;
-        font-size: 2.8rem;
+        font-size: 2rem;
         padding: 0 1rem;
         color: grey;
         font-weight: bold;
