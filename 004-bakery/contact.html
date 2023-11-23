@@ -5,6 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Bakery</title>
         <link rel="stylesheet" href="css/stylesheet.css" />
+        <style>
+            .box {
+                width: 100%;
+                height: 20vh;
+                background: silver;
+                margin-bottom: 5rem;
+            }
+
+            #contact {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                font-size: 1.6rem;
+            }
+
+            #form {
+                flex: 0.5;
+            }
+            #form div {
+                padding: 0 0 1rem;
+            }
+            #adress {
+                flex: 0.5;
+                text-align: left;
+                padding: 0 5rem;
+            }
+
+            #maps p {
+                text-align: center;
+                font-size: 3.5rem;
+                color: silver;
+            }
+        </style>
     </head>
     <body>
         <div class="wrapper">
@@ -33,38 +66,91 @@
             <main>
                 <div id="main-wrapper" class="inner-wrapper">
                     <div id="main-wrapper-top">
-                        <p>Our Team</p>
+                        <p>Contact us..!</p>
                         <div id="quality-seal">
                             <img src="img/logo-qualitätssiegel.png" alt="" />
                         </div>
                     </div>
                     <div id="contact">
-                        <form action="">
-                            <div class="gender">
-                                <input type="radio" name="male" id="male" />
-                                <label class="label-inline" for="male"
-                                    >Male</label
-                                >
-                            </div>
-                            <div class="gender">
-                                <input type="radio" name="female" id="female" />
-                                <label class="label-inline" for="female"
-                                    >Female</label
-                                >
-                            </div>
-                            <input
-                                type="text"
-                                name="first-name"
-                                id="first-name"
-                                placeholder="First Name"
-                            />
-                            <input
-                                type="text"
-                                name="last-name"
-                                id="last-name"
-                                placeholder="Last Name"
-                            />
-                        </form>
+                        <div id="form">
+                            <form>
+                                <div>
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        autocomplete="off"
+                                    />
+                                    <label for="gender">Mr. </label>
+
+                                    <input
+                                        type="radio"
+                                        name="gender"
+                                        autocomplete="off"
+                                    />
+                                    <label for="gender">Mr. </label>
+                                </div>
+                                <div>
+                                    <label for="fname">First Name:</label>
+                                    <input
+                                        class="input-box"
+                                        type="text"
+                                        id="fname"
+                                        autocomplete="off"
+                                    />
+                                </div>
+                                <div>
+                                    <label for="lname">Last Name:</label>
+                                    <input
+                                        class="input-box"
+                                        type="text"
+                                        id="lname"
+                                        autocomplete="off"
+                                    />
+                                </div>
+                                <div>
+                                    <label for="email">E-Mail:</label>
+                                    <input
+                                        class="input-box"
+                                        type="email"
+                                        name="email"
+                                        autocomplete="off"
+                                    />
+                                </div>
+                                <div>
+                                    <label for="birth-date">Birth Date:</label>
+                                    <input
+                                        class="input-box"
+                                        type="date"
+                                        name="birth-date"
+                                        id="birth-date"
+                                    />
+                                </div>
+                                <div>
+                                    <label class="full-width" for="contact-text"
+                                        >Tell us what can we help you
+                                        with:</label
+                                    >
+                                    <textarea
+                                        class="input-box"
+                                        name="contact-text"
+                                        id="contact-text"
+                                        cols="30"
+                                        rows="10"
+                                    ></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="adress">
+                            <p>Adress</p>
+                            <p>
+                                Lorem ipsum dolor sit amet <br />
+                                Consectetur adipisicing.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="maps">
+                        <p>Google Maps</p>
+                        <div class="box"></div>
                     </div>
                 </div>
             </main>
