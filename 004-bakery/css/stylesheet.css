@@ -24,8 +24,8 @@ html * {
     font-family: Josefin;
 }
 
-.milligram {
-    color: var(--light-brown);
+p * {
+    margin-top: 0;
 }
 
 html,
@@ -61,12 +61,17 @@ img {
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
+}
+
+nav {
+    padding: 1.6rem;
 }
 
 .logo {
-    width: 18vw;
-    max-width: 22rem;
+    width: 100%;
+    max-width: 28rem;
+    padding: 0.8rem;
 }
 
 #quality-seal img {
@@ -255,11 +260,58 @@ input {
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin: 0 0 1rem;
+    caret-color: var(--light-brown);
+    outline-color: var(--light-brown);
 }
 
 .input-box {
     width: 100%;
 }
+
+textarea,
+input {
+    resize: none;
+    border-radius: 3px;
+    border: 3px solid var(--light-brown);
+}
+button {
+    padding: 1rem 2rem;
+    background-color: white;
+    color: grey;
+    border: 3px solid var(--light-brown);
+    border-radius: 3px;
+}
+
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 1.6rem;
+}
+
+#form {
+    flex: 1;
+    color: darkgrey;
+}
+#form div {
+    padding: 0 0 1rem;
+}
+#adress {
+    flex: 1;
+    text-align: left;
+    padding: 3rem 5rem 0;
+}
+
+.ani:hover {
+    transform: scale(1.1);
+    transition: 1s ease-out;
+}
+
+.ani2:hover {
+    transform: scale(1.05);
+    transition: 1s ease-out;
+}
+
 @media screen and (min-width: 720px) {
     #main-wrapper .main-wrapper-middle .articles img {
         max-width: 100%;
@@ -299,6 +351,26 @@ input {
 
     #team-boxes .team-box:nth-child(2n) {
         flex-direction: row-reverse;
+    }
+
+    #contact {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        font-size: 1.6rem;
+    }
+
+    #form {
+        flex: 0.5;
+        color: darkgrey;
+    }
+    #form div {
+        padding: 0 0 1rem;
+    }
+    #adress {
+        flex: 0.5;
+        text-align: left;
+        padding: 0 5rem;
     }
 }
 
@@ -340,5 +412,24 @@ input {
         grid-column: 2 / 4;
         grid-row: 1 / 3;
         width: 100%;
+    }
+    #contact {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        font-size: 1.6rem;
+    }
+
+    #form {
+        flex: 0.5;
+        color: darkgrey;
+    }
+    #form div {
+        padding: 0 0 1rem;
+    }
+    #adress {
+        flex: 0.5;
+        text-align: left;
+        padding: 0 5rem;
     }
 }

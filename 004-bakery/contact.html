@@ -13,25 +13,6 @@
                 margin-bottom: 5rem;
             }
 
-            #contact {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                font-size: 1.6rem;
-            }
-
-            #form {
-                flex: 0.5;
-            }
-            #form div {
-                padding: 0 0 1rem;
-            }
-            #adress {
-                flex: 0.5;
-                text-align: left;
-                padding: 0 5rem;
-            }
-
             #maps p {
                 text-align: center;
                 font-size: 3.5rem;
@@ -73,19 +54,23 @@
                     </div>
                     <div id="contact">
                         <div id="form">
-                            <form>
+                            <form
+                                action="https://jwe.obinet.at/bakery_order.php"
+                                method="POST"
+                            >
+                                />
                                 <div>
                                     <input
-                                        type="radio"
                                         name="gender"
-                                        autocomplete="off"
+                                        id="gender-male"
+                                        type="radio"
                                     />
                                     <label for="gender">Mr. </label>
 
                                     <input
-                                        type="radio"
                                         name="gender"
-                                        autocomplete="off"
+                                        id="gender-female"
+                                        type="radio"
                                     />
                                     <label for="gender">Mr. </label>
                                 </div>
@@ -95,7 +80,7 @@
                                         class="input-box"
                                         type="text"
                                         id="fname"
-                                        autocomplete="off"
+                                        name="fname"
                                     />
                                 </div>
                                 <div>
@@ -104,6 +89,7 @@
                                         class="input-box"
                                         type="text"
                                         id="lname"
+                                        name="lname"
                                         autocomplete="off"
                                     />
                                 </div>
@@ -138,6 +124,7 @@
                                         rows="10"
                                     ></textarea>
                                 </div>
+                                <button type="submit">Submit</button>
                             </form>
                         </div>
                         <div id="adress">
