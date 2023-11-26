@@ -5,12 +5,18 @@ html * {
         sans-serif;
 }
 
-.container-xl {
+/* .container-xl {
     border: 3px dashed lightgray;
-}
+} */
 
 body {
     height: 200vh;
+    font-size: 62.5%;
+}
+
+#header-logo {
+    max-width: 16rem;
+    max-height: 10vh;
 }
 
 #nav-bar {
@@ -27,7 +33,7 @@ body {
     z-index: -10;
 }
 
-#hero-img-fix {
+#hero-img-space {
     height: 70vh;
 }
 
