@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sky-blue: #95e2ff;
+    --sun-orange: #ffba00;
+    --ground-teal: #c7b49b;
+    --tree-green: #259025;
+    --tree-brown: #8d5730;
+}
+
+@keyframes sundown {
+    0% {
+        margin-bottom: -12.5vw;
+    }
+    100% {
+        margin-bottom: -25.5vw;
+    }
+}
+
+@keyframes nightsky {
+    0% {
+        background: rgb(255, 186, 0);
+        background: linear-gradient(
+            8deg,
+            rgba(255, 186, 0, 1) 0%,
+            rgba(0, 212, 255, 1) 70%
+        );
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        background: rgb(61, 61, 61);
+        background: linear-gradient(
+            15deg,
+            rgba(61, 61, 61, 1) 50%,
+            rgba(136, 136, 136, 1) 100%
+        );
+        opacity: 100%;
+    }
+}
+
+@keyframes silver-cloud {
+    0% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: #c0c0c0;
+    }
+}
+
+@keyframes moondown {
+    0% {
+        right: 5vw;
+        top: -15vw;
+    }
+
+    100% {
+        right: 5vw;
+        top: 15vw;
+    }
+}
+
+body {
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+.moon {
+    background: white;
+    height: 15vw;
+    width: 15vw;
+    position: absolute;
+    border-radius: 50%;
+    right: 5vw;
+    top: -15vw;
+    z-index: 4;
+    animation: moondown 10s alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.background {
+    /* background-color: var(--sky-blue); */
+    background: rgb(255, 186, 0);
+    background: linear-gradient(
+        8deg,
+        rgba(255, 186, 0, 1) 0%,
+        rgba(0, 212, 255, 1) 70%
+    );
+    height: 80vh;
+    width: 100vw;
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: nightsky 10s alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.ground {
+    background-color: var(--ground-teal);
+    height: 20vh;
+    z-index: 1;
+    position: relative;
+}
+
+.cloud {
+    position: relative;
+    display: inline-block;
+    width: 40vw;
+    height: 15vw;
+    background-color: white;
+    border-radius: 50%;
+    animation: silver-cloud 10s alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 6;
+}
+
+.cloud:first-of-type {
+    margin: 15vw -25vw 5vw 8vw;
+}
+
+.cloud:last-of-type {
+    width: 40vw;
+    height: 25vw;
+    margin: 1vw 1vw 5vw -25vw;
+}
+
+.sun {
+    background-color: var(--sun-orange);
+    width: 25vw;
+    height: 25vw;
+    margin-bottom: -12.5vw;
+    margin-left: 10vw;
+    border: none;
+    border-radius: 50%;
+    z-index: 0;
+    animation: sundown 10s alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.margin-ground {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.tree-top {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background-color: var(--tree-green);
+    margin: -10vw 8.5vw 0 0;
+}
+
+.tree-bottom {
+    width: 3vw;
+    height: 15vw;
+    background-color: var(--tree-brown);
+    margin: 5vw 20vw 0vw -20vw;
+}
