@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My First Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/normalize.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <style>
+            body {
+                margin: 4rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="collapsible">
+            <header class="collapsible__header">
+                <h2 class="collapsible__heading">Item 1</h2>
+
+                <svg class="icon icon--primary">
+                    <use xlink:href="../icons/sprite.svg#chevron"></use>
+                </svg>
+            </header>
+            <div class="collapsible__content">Lorem ipsum dolor sit amet.</div>
+        </div>
+    </body>
+</html>
