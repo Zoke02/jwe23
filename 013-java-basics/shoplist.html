@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>javaScript ShopList</title>
+        <link rel="stylesheet" href="../vendor/css/bootstrap.css" />
+
+        <style>
+            body {
+                margin: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header><h1>Shop List</h1></header>
+            <main>
+                <input
+                    type="text"
+                    name="newElement"
+                    id="newElement"
+                    class="form-control"
+                />
+                <button class="btn btn-primary" onclick="addNewElement()">
+                    Test
+                </button>
+                <div id="myListOutput">
+                    <!-- <textarea
+                        name="myListOutput"
+                        id="myListOutput"
+                        cols="30"
+                        rows="10"
+                    ></textarea> -->
+                </div>
+            </main>
+        </div>
+        <script src="../vendor/js/bootstrap.js"></script>
+        <script src="js/shoplist.js"></script>
+    </body>
+</html>

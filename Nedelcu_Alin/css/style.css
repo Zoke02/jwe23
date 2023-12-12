@@ -1,0 +1,294 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --blue-green: #08b8b3;
+    --grey: #808080;
+}
+
+html * {
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.inner-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* Typography */
+
+h1 {
+    text-transform: uppercase;
+    color: var(--blue-green);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+/* Nav-Bar */
+
+.black-nav-bar {
+    background: black;
+}
+.nav-bar {
+    display: flex;
+    padding: 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 80px;
+}
+
+.burger-menu {
+    max-width: 30px;
+}
+
+.img-hero {
+    width: 100%;
+    min-height: 190px;
+    max-height: 585px;
+    object-fit: cover;
+    border-top: 2px solid var(--blue-green);
+}
+
+.sub-hero-container {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.sub-hero-container p {
+    font-size: 14px;
+}
+
+/* Main */
+
+.boxes {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.box {
+    text-align: center;
+    background-color: var(--blue-green);
+    color: white;
+    padding: 30px;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-out;
+}
+
+.box a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+
+.footer-grey {
+    background: var(--grey);
+    text-align: center;
+    color: white;
+}
+
+.footer-grey-flex {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 30px;
+}
+
+.footer-grey img {
+    max-width: 200px;
+}
+
+.footer-grey-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-black {
+    background: black;
+    text-align: center;
+    padding: 50px 30px 30px;
+}
+
+.footer-black-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-black p {
+    color: white;
+    font-size: 12px;
+}
+
+.footer-black ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-black li {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.footer-black li:first-of-type {
+    margin-top: 0;
+}
+
+.footer-black a {
+    color: var(--blue-green);
+}
+
+.exklusiv-button {
+    display: none;
+}
+
+.love {
+    color: red;
+}
+
+@media screen and (min-width: 1024px) {
+    .exklusiv-button {
+        display: block;
+        width: 170px;
+        height: 170px;
+        position: absolute;
+        bottom: calc(-170px / 2);
+        right: 10%;
+    }
+
+    .exklusiv-button:hover {
+        transform: scale(1.05);
+        transition: all 0.5s linear;
+    }
+
+    .hero-container {
+        position: relative;
+    }
+
+    .boxes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        transition: all 1s ease;
+    }
+
+    .footer-grey-links {
+        flex-direction: row;
+    }
+
+    .sub-hero-container {
+        text-align: start;
+        padding-right: 0;
+        max-width: 650px;
+    }
+
+    .sub-hero-container h1 {
+        font-size: 36px;
+        transition: all 1s ease;
+    }
+    .sub-hero-container p {
+        font-size: 18px;
+        transition: all 1s ease;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .exklusiv-button {
+        width: 280px;
+        height: 280px;
+        bottom: calc(-280px / 2);
+        right: 5%;
+        transition: all 1s ease;
+    }
+
+    .sub-hero-container h1 {
+        font-size: 65px;
+        width: 800px;
+        transition: all 1s ease;
+    }
+
+    .footer-black {
+        padding: 50px 30px;
+    }
+
+    .footer-black-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: start;
+    }
+
+    .footer-name {
+        text-align: end;
+        align-self: flex-end;
+    }
+
+    .boxes {
+        padding: 30px 0;
+    }
+
+    .sub-hero-container {
+        padding-left: 0;
+    }
+
+    .nav-bar {
+        padding: 20px 0;
+    }
+    .footer-name p {
+        margin-bottom: 0;
+    }
+}
