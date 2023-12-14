@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thermostat</title>
+        <link rel="stylesheet" href="../vendor/css/bootstrap.css" />
+        <style>
+            body {
+                margin: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="display-1" id="display"></p>
+        <button class="btn btn-primary" id="tempUp" onclick="changeTemp('up')">
+            Plus
+        </button>
+        <button
+            class="btn btn-primary"
+            id="tempDown"
+            onclick="changeTemp('down')"
+        >
+            Minus
+        </button>
+
+        <!-- Vendor -->
+        <script src="../vendor/js/bootstrap.js"></script>
+        <script src="thermostat.js"></script>
+    </body>
+</html>

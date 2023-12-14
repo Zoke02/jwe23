@@ -6,7 +6,7 @@ let newElement = document.querySelector('#newElement');
 
 let addNewElement = function () {
     let newElementValue = newElement.value;
-    console.log(newElementValue);
+    // console.log(newElementValue);
     myList.push(newElementValue);
     getAllElementsFromList();
 };
@@ -14,7 +14,10 @@ let addNewElement = function () {
 let getAllElementsFromList = function () {
     let htmlOutput = '';
     myList.forEach((element) => {
-        htmlOutput += element + '<br>';
+        htmlOutput +=
+            document.querySelector('#myListOutput').innerHTML +
+            element +
+            '<br>';
     });
     document.querySelector('#myListOutput').innerHTML = htmlOutput;
 };
