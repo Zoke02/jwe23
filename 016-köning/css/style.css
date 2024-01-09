@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Cherry;
+    src: url(../fonts/CherrySwash-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cherry;
+    src: url(../fonts/CherrySwash-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+html * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --green: #053336;
+    --gold: #a9a084;
+    --grey: #e8e8e8;
+}
+
+body {
+    background: var(--green);
+    font-family: Cherry, Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Typography */
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.font-green {
+    color: var(--green);
+}
+
+.font-gold {
+    color: var(--gold);
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 5.8rem;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* Button */
+
+.btn {
+    width: 15rem;
+    height: 4.5rem;
+    border-radius: 3rem;
+}
+
+.btn--primary {
+    background: var(--green);
+    color: white;
+    border: none;
+}
+
+.btn--secondary {
+    background: transparent;
+    border: 1px solid white;
+}
+
+/* Header */
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.nav-bar__logo {
+    width: 16rem;
+    margin: -3rem -1rem;
+}
+
+.nav-bar__burger {
+    width: 4rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
