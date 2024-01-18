@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>javaScript ShopList</title>
+        <link rel="stylesheet" href="../vendor/css/bootstrap.css" />
+
+        <style>
+            body {
+                margin: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Shoplist with jQuery</h1>
+                    <div class="input-group mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Write item name"
+                            aria-label="New Products"
+                            aria-describedby="add-product"
+                            id="new-product"
+                        />
+                        <button
+                            class="btn btn-outline-secondary"
+                            type="button"
+                            id="add-product"
+                        >
+                            Add Product
+                        </button>
+                    </div>
+
+                    <div id="product-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../vendor/js/bootstrap.js"></script>
+        <script src="../vendor/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendor/cookies/js.cookie.min.js"></script>
+        <script src="js/shoplist.js"></script>
+    </body>
+</html>

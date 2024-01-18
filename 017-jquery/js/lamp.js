@@ -14,7 +14,7 @@ const settings = {
 
 const fromGreenToRed = function () {
     window.setTimeout(function () {
-        settings.state = settings.states[3];
+        settings.state = settings.states[2];
         window.setTimeout(function () {
             settings.state = settings.states[0];
             window.setTimeout(function () {
@@ -26,18 +26,14 @@ const fromGreenToRed = function () {
 
 const fromRedToGreen = function () {
     window.setTimeout(function () {
-        settings.state = settings.states[1];
-        window.setTimeout;
-        (function () {
+        settings.state = settings.states[0];
+        window.setTimeout(function () {
             settings.state = settings.states[2];
-            window.setTimeout(fromGreenToRed, settings.duration.red * 1000);
-        }),
-            1000;
+            window.setTimeout(fromGreenToRed, settings.duration.green * 1000);
+        }, 1000);
     }, 1000);
 };
 
 window.setInterval(function () {
     $('#lamp').text(settings.state);
 }, 1000);
-
-$('#lamp').css('background-color', 'red');
