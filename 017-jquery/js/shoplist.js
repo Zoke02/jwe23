@@ -61,7 +61,19 @@ const createProductList = function () {
     $(myList).each(prependNewProduct);
 };
 
-createProductList(myList);
+createProductList();
+
+const setCheckedListItems = function () {
+    const cookie = Cookies.get('checked_items');
+    if (typeof cookie != 'undefined' && cookie != '') {
+        let checkedItems = cookie.split(',');
+        $(checkedItems).each(function (key, value) {
+            $('#product-' + value).prop('checked', true);
+        });
+    }
+};
+
+setCheckedListItems();
 
 const showFilteredList = function (list) {
     $('#product-list').empty();
@@ -80,29 +92,36 @@ const filterList = function () {
 $('#add-product').on('click', filterList);
 $('#new-product').on('keyup', filterList);
 
-$('input.form-check-input').on('click', function () {
-    let checkbox = $(this);
-    console.log(checkbox.prop('checked'));
-
-    if (checkbox.prop('checked') == true) {
-    }
-});
-
-// Cookies.set('product_bought', [false, false, false, false]);
-
-// $('[data-product-id]').each(function (index, product) {
-//     let element = $(this);
-
-//     if (element.attr('data-product-id') == 1) {
-//         element.find('input.form-check-input').prop('checked', true);
+// $('input.form-check-input').on('click', function () {
+//     let checkbox = $(this);
+//     console.log(checkbox.prop('checked'));
+//     if (checkbox.prop('checked') == true) {
 //     }
 // });
 
-// $('input.form-check-input').each(function (index, input) {
-//     if ($(input).attr('id') == 'product-' + 2) $(input).prop('checke0d', true);
-// });
+// Cookies.set('product_bought', []);
 
-document.cookie = product_bought;
-function setCookesToBought() {
-    Cookes.set(product_bought);
-}
+// Lesen der aktuell gechecked inputs
+// Bauen des Arrays mit der Liste aller product-ids der Elemente die gechecked sind
+// Speichern in Cookies
+
+$('#product-list input').change(function () {
+    let listOfCheckedInputs = [];
+    let checkedInputs = $('input:checked');
+    // console.log(checkedInputs);
+
+    checkedInputs.each(function () {
+        let productId = $(this).closest('[data-product-id]').data('product-id');
+        // console.log(productId)
+        listOfCheckedInputs.push(productId);
+        // console.log(listOfCheckedInputs);
+    });
+
+    Cookies.set('checked_items', listOfCheckedInputs.join(','), {
+        expires: 365,
+    });
+});
+
+// Cookies auslessen
+// Array mit Schleife durchgehen
+// Listenelemente .prop() altualisieren
