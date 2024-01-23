@@ -88,16 +88,21 @@ $('input.form-check-input').on('click', function () {
     }
 });
 
-Cookies.set('product_bought', [false, false, false, false]);
+// Cookies.set('product_bought', [false, false, false, false]);
 
-$('[data-product-id]').each(function (index, product) {
-    let element = $(this);
+// $('[data-product-id]').each(function (index, product) {
+//     let element = $(this);
 
-    if (element.attr('data-product-id') == 1) {
-        element.find('input.form-check-input').prop('checked', true);
-    }
-});
+//     if (element.attr('data-product-id') == 1) {
+//         element.find('input.form-check-input').prop('checked', true);
+//     }
+// });
 
 // $('input.form-check-input').each(function (index, input) {
 //     if ($(input).attr('id') == 'product-' + 2) $(input).prop('checke0d', true);
 // });
+
+document.cookie = product_bought;
+function setCookesToBought() {
+    Cookes.set(product_bought);
+}
